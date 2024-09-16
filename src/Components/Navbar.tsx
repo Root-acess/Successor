@@ -32,13 +32,13 @@ const Navbar: React.FC = () => {
 
         {/* Social Media Icons */}
         <div className="flex items-center space-x-4">
-        <a href="#" aria-label="Facebook" className="hover:text-gray-200 transition-colors">
+        <a href="https://www.facebook.com/hero.akash.714049/" aria-label="Facebook" className="hover:text-gray-200 transition-colors">
             <FaFacebook className="w-6 h-6" />
           </a>
-          <a href="#" aria-label="Instagram" className="hover:text-gray-200 transition-colors">
+          <a href="https://www.instagram.com/thesuccessorindia?igsh=MWVnMTZsOHY0MDhsMw==" aria-label="Instagram" className="hover:text-gray-200 transition-colors">
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a href="#" aria-label="LinkedIn" className="hover:text-gray-200 transition-colors">
+          <a href="https://www.linkedin.com" aria-label="LinkedIn" className="hover:text-gray-200 transition-colors">
             <FaLinkedin className="w-6 h-6" />
           </a>
         </div>

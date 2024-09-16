@@ -3,11 +3,14 @@ import './CustomButton.css'; // Ensure you have this CSS file
 
 const CustomButton: React.FC = () => {
   return (
-    <button className="button">
+    <a href="https://calendly.com/successor562">
+       <button className="button">
       <div className="text">
         Learn More
       </div>
     </button>
+    </a>
+   
   );
 };
 
