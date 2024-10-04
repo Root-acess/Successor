@@ -10,6 +10,7 @@ import Newsletter from './Components/Newsletter';
 import Accordion from './Pages/FAQ';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
+import Info from './Components/Info';
 
 const App: React.FC = () => {
   return (
@@ -30,6 +31,10 @@ const App: React.FC = () => {
 
         <Element name="steps">
           <Steps />
+        </Element>
+
+        <Element name="info">
+          <Info  />
         </Element>
 
         <Element name="explore">

@@ -1,70 +1,108 @@
+import { useState } from 'react';
 
-import { Accordion } from 'react-bootstrap';
- // Ensure Bootstrap CSS is imported
+interface FAQItemProps {
+  question: string;
+  answer: string;
+}
 
-const FAQ = () => {
+const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="container py-5">
-      <div className="text-center mb-5">
-        <h2 className="display-4 text-dark font-weight-bold">Your Marketing Questions, Answered</h2>
-        <p className="text-muted">Find answers to the most frequently asked questions about our social media marketing services.</p>
+    <div className="hs-accordion hs-accordion-active:bg-gray-800 rounded-xl p-6 dark:hs-accordion-active:bg-gray-800">
+      <button
+        className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-white rounded-lg transition hover:text-gray-400 focus:outline-none focus:text-gray-400"
+        aria-expanded={isOpen}
+        onClick={toggleAccordion}
+      >
+        {question}
+        <svg
+          className={`hs-accordion-active:${!isOpen ? 'hidden' : 'block'} shrink-0 size-5 text-gray-400 group-hover:text-gray-300`}
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d={isOpen ? 'M18 15l-6-6-6 6' : 'M6 9l6 6 6-6'} />
+        </svg>
+      </button>
+      <div
+        className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300 ${
+          isOpen ? 'block' : 'hidden'
+        }`}
+      >
+        <p className="text-gray-400">{answer}</p>
       </div>
+    </div>
+  );
+};
 
-      <Accordion defaultActiveKey="0" className="accordion-flush">
-        <Accordion.Item eventKey="0" className="border-0 rounded-lg shadow-sm mb-3">
-          <Accordion.Header className="bg-light text-dark rounded-lg py-2 px-3">
-            Can I start with a small budget?
-          </Accordion.Header>
-          <Accordion.Body className="p-4">
-            Absolutely! We offer flexible packages to suit different budgets. We'll work with you to maximize your ROI regardless of the size of your budget.
-          </Accordion.Body>
-        </Accordion.Item>
+const FAQ: React.FC = () => {
+  const faqs = [
+    {
+      question: 'How does Successor SMMA help businesses grow on social media?',
+      answer:
+        'At Successor SMMA, we craft personalized strategies to boost your brand’s online presence. Our team uses data-driven insights, trend analysis, and creative content to connect you with your target audience. Whether it’s Instagram, LinkedIn, or Facebook, we create campaigns that engage and convert followers into loyal customers.',
+    },
+    {
+      question: 'What types of businesses do you specialize in?',
+      answer:
+        'We work with a diverse range of industries, from startups to established enterprises. Our expertise spans tech companies, e-commerce brands, personal development coaches, real estate agencies, and more. No matter the industry, we tailor our approach to meet your unique business needs and goals.',
+    },
+    {
+      question: 'How do you ensure the content aligns with my brand’s vision?',
+      answer:
+        'We prioritize understanding your brand’s identity, mission, and values before launching any campaign. Our strategy begins with in-depth consultations, competitor analysis, and audience profiling, ensuring that every piece of content reflects your brand’s voice and resonates with your target market.',
+    },
+    {
+      question: 'Can I see results from your services quickly?',
+      answer:
+        'While social media growth requires consistency and time, our strategies focus on delivering measurable results within the first few months. We provide regular performance reports, monitor engagement, and adjust campaigns as needed to maximize your ROI and accelerate growth.',
+    },
+    {
+      question: 'What services do you offer beyond social media management?',
+      answer:
+        'In addition to managing your social media accounts, we offer comprehensive digital marketing solutions, including paid ad campaigns, influencer partnerships, content creation, video production, and website optimization. Our holistic approach ensures that every aspect of your digital presence is covered.',
+    },
+    {
+      question: 'How transparent is your reporting process?',
+      answer:
+        'Transparency is key at Successor SMMA. We provide detailed reports that break down your social media performance, including engagement rates, follower growth, ad spend, and conversions. These reports allow you to track your progress and make informed decisions about your digital strategy.',
+    },
+  ];
 
-        <Accordion.Item eventKey="1" className="border-0 rounded-lg shadow-sm mb-3">
-          <Accordion.Header className="bg-light text-dark rounded-lg py-2 px-3">
-            How long will it take to see results?
-          </Accordion.Header>
-          <Accordion.Body className="p-4">
-            Results can vary depending on your goals and the current state of your social media presence. Typically, clients start seeing noticeable improvements within 2-3 months.
-          </Accordion.Body>
-        </Accordion.Item>
-
-        <Accordion.Item eventKey="2" className="border-0 rounded-lg shadow-sm mb-3">
-          <Accordion.Header className="bg-light text-dark rounded-lg py-2 px-3">
-            What social media platforms do you work with?
-          </Accordion.Header>
-          <Accordion.Body className="p-4">
-            We work with a wide range of platforms including Facebook, Instagram, Twitter, LinkedIn, and TikTok. We tailor our strategies to fit the platforms that best reach your target audience.
-          </Accordion.Body>
-        </Accordion.Item>
-
-        <Accordion.Item eventKey="3" className="border-0 rounded-lg shadow-sm mb-3">
-          <Accordion.Header className="bg-light text-dark rounded-lg py-2 px-3">
-            How do you measure the success of your campaigns?
-          </Accordion.Header>
-          <Accordion.Body className="p-4">
-            We use various metrics such as engagement rates, click-through rates, conversion rates, and return on investment (ROI) to measure the success of our campaigns. We provide regular reports to keep you updated on performance.
-          </Accordion.Body>
-        </Accordion.Item>
-
-        <Accordion.Item eventKey="4" className="border-0 rounded-lg shadow-sm mb-3">
-          <Accordion.Header className="bg-light text-dark rounded-lg py-2 px-3">
-            Can you help with content creation?
-          </Accordion.Header>
-          <Accordion.Body className="p-4">
-            Yes, we offer comprehensive content creation services, including graphic design, copywriting, and video production. Our team ensures that all content aligns with your brand and engages your target audience.
-          </Accordion.Body>
-        </Accordion.Item>
-
-        <Accordion.Item eventKey="5" className="border-0 rounded-lg shadow-sm mb-3">
-          <Accordion.Header className="bg-light text-dark rounded-lg py-2 px-3">
-            What happens if I’m not satisfied with the results?
-          </Accordion.Header>
-          <Accordion.Body className="p-4">
-            Your satisfaction is our priority. If you're not happy with the results, we offer a review and optimization process to address any concerns. We also provide ongoing support to ensure your objectives are met.
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
+  return (
+    <div className="bg-black text-white min-h-screen px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      {/* Title */}
+      <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+        <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
+          Your Questions About Social Media Marketing, Answered
+        </h2>
+        <p className="mt-1 text-gray-400">
+          Discover how Successor SMMA can help elevate your brand’s social media game.
+        </p>
+      </div>
+      {/* FAQ Items */}
+      <div className="max-w-2xl mx-auto">
+        <div className="hs-accordion-group">
+          {faqs.map((faq, index) => (
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

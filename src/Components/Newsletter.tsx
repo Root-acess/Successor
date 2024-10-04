@@ -44,10 +44,11 @@ const Newsletter: React.FC = () => {
     };
 
     return (
-        <div className="max-w-6xl py-10 px-4 sm:px-6 lg:px-8 lg:py-16 mx-auto bg-white">
-            <div className="max-w-xl text-center mx-auto">
+        <div className='bg-black'>
+            <div className="max-w-6xl py-10 sm:px-6 lg:px-8 lg:py-16 mx-auto">
+            <div className="max-w-xl text-center mx-auto bg-black">
                 <div className="mb-5">
-                    <h2 className="text-2xl font-bold md:text-3xl md:leading-tight text-black">
+                    <h2 className="text-2xl font-bold md:text-3xl md:leading-tight text-white">
                         Sign up to our newsletter
                     </h2>
                 </div>
@@ -80,6 +81,8 @@ const Newsletter: React.FC = () => {
                 {success && <p className="mt-4 text-green-600">{success}</p>}
             </div>
         </div>
+        </div>
+        
     );
 };
 

@@ -1,22 +1,20 @@
-
-
 const Steps = () => {
   return (
     <section className="services">
-      <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 text-gray-800">
+      <div className="bg-black text-white py-5">
 
         <div className="max-w-5xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto">
 
           <div className="max-w-3xl mb-10 lg:mb-14 mt-5">
             <h2 className="text-blue-600 font-semibold text-2xl md:text-4xl md:leading-tight">Our Approach</h2>
-            <p className="mt-1 text-gray-600">
+            <p className="mt-1 text-gray-400">
               This profound insight guides our comprehensive strategy — from meticulous research and strategic planning to the seamless execution of brand development and website or product deployment.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-center">
             <div className="aspect-w-16 aspect-h-9 lg:aspect-none">
-              <img className="w-full object-cover rounded-xl shadow-md" src="https://images.unsplash.com/photo-1587614203976-365c74645e83?q=80&w=480&h=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Features Image" />
+              <img className="w-full object-cover rounded-xl shadow-lg" src="https://images.unsplash.com/photo-1587614203976-365c74645e83?q=80&w=480&h=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Features Image" />
             </div>
 
             <div>
@@ -27,57 +25,57 @@ const Steps = () => {
               <div className="flex flex-col gap-y-8">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-md">
+                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-lg">
                       1
                     </span>
                   </div>
                   <div className="flex-grow">
-                    <p className="text-sm lg:text-base text-gray-700">
-                      <span className="text-gray-900">Market Research and Analysis:</span> Identify your target audience and understand their needs, preferences, and behaviors.
+                    <p className="text-sm lg:text-base text-gray-400">
+                      <span className="text-white font-semibold">Market Research and Analysis:</span> Identify your target audience and understand their needs, preferences, and behaviors.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-md">
+                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-lg">
                       2
                     </span>
                   </div>
                   <div className="flex-grow">
-                    <p className="text-sm lg:text-base text-gray-700">
-                      <span className="text-gray-900">Product Development and Testing:</span> Develop digital products or services that address the needs and preferences of your target audience.
+                    <p className="text-sm lg:text-base text-gray-400">
+                      <span className="text-white font-semibold">Product Development and Testing:</span> Develop digital products or services that address the needs and preferences of your target audience.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-md">
+                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-lg">
                       3
                     </span>
                   </div>
                   <div className="flex-grow">
-                    <p className="text-sm lg:text-base text-gray-700">
-                      <span className="text-gray-900">Marketing and Promotion:</span> Develop a comprehensive marketing strategy to promote your digital products or services.
+                    <p className="text-sm lg:text-base text-gray-400">
+                      <span className="text-white font-semibold">Marketing and Promotion:</span> Develop a comprehensive marketing strategy to promote your digital products or services.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-md">
+                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-lg">
                       4
                     </span>
                   </div>
                   <div className="flex-grow">
-                    <p className="text-sm lg:text-base text-gray-700">
-                      <span className="text-gray-900">Launch and Optimization:</span> Launch your digital products or services to the market, closely monitoring their performance and user feedback.
+                    <p className="text-sm lg:text-base text-gray-400">
+                      <span className="text-white font-semibold">Launch and Optimization:</span> Launch your digital products or services to the market, closely monitoring their performance and user feedback.
                     </p>
                   </div>
                 </div>
 
-                <a className="group inline-flex items-center gap-x-2 py-2 px-4 bg-blue-600 font-medium text-sm text-white rounded-full shadow-md hover:bg-blue-700 focus:outline-none" href="https://calendly.com/successor562/30min">
+                <a className="group inline-flex items-center gap-x-2 py-2 px-4 bg-blue-600 font-medium text-sm text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none" href="https://calendly.com/successor562/30min">
                   <svg className="shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     <path className="opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-hover:delay-100 transition" d="M14.05 2a9 9 0 0 1 8 7.94"></path>
@@ -93,8 +91,7 @@ const Steps = () => {
         </div>
       </div>
     </section>
-
   )
 }
 
-export default Steps
+export default Steps;

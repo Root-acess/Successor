@@ -3,7 +3,7 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <footer
-      className="relative overflow-hidden text-light py-5 bg-gradient-to-br from-[#ff6f61] to-[#d3a625] text-center"
+      className="relative overflow-hidden text-light py-5 bg-black text-center"
       style={{ color: '#e0e0e0' }}
     >
       {/* Overlay */}
