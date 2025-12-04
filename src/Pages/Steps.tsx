@@ -1,3 +1,5 @@
+import ddd from '../assets/ddd.png';
+
 const Steps = () => {
   return (
     <section className="services">
@@ -22,7 +24,7 @@ const Steps = () => {
             <div className="aspect-w-16 aspect-h-9 lg:aspect-none">
               <img
                 className="w-full object-cover rounded-xl shadow-lg"
-                src="https://images.unsplash.com/photo-1581091012184-7c2c8b43a3a0?auto=format&fit=crop&w=900&q=80"
+                src={ddd}
                 alt="SupportTech X IT Services"
               />
             </div>

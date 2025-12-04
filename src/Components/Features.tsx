@@ -1,3 +1,5 @@
+import edd from '../assets/eed.png';
+
 const FeatureItem = () => {
   return (
     <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-black">
@@ -118,7 +120,7 @@ const FeatureItem = () => {
                 <div id="tabs-with-card-1" role="tabpanel" aria-labelledby="tabs-with-card-item-1">
                   <img 
                     className="shadow-xl rounded-xl"
-                    src="https://images.unsplash.com/photo-1581091870634-5dcb0fd2c22b?auto=format&fit=crop&w=560&q=80"
+                    src={edd}
                     alt="Domain and Hosting Support"
                   />
                 </div>

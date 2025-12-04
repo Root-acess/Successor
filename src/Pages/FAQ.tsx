@@ -8,101 +8,98 @@ interface FAQItemProps {
 const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div className="hs-accordion hs-accordion-active:bg-gray-800 rounded-xl p-6 dark:hs-accordion-active:bg-gray-800">
+    <div className="hs-accordion bg-neutral-900 rounded-xl p-6 mb-4 border border-neutral-800">
       <button
-        className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-white rounded-lg transition hover:text-gray-400 focus:outline-none focus:text-gray-400"
+        className="flex items-center justify-between w-full text-left text-white font-semibold text-lg transition hover:text-gray-300"
         aria-expanded={isOpen}
-        onClick={toggleAccordion}
+        onClick={() => setIsOpen(!isOpen)}
       >
         {question}
+
         <svg
-          className={`hs-accordion-active:${!isOpen ? 'hidden' : 'block'} shrink-0 size-5 text-gray-400 group-hover:text-gray-300`}
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
+          className={`transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"} w-5 h-5 text-gray-400`}
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          viewBox="0 0 24 24"
         >
-          <path d={isOpen ? 'M18 15l-6-6-6 6' : 'M6 9l6 6 6-6'} />
+          <path d="M6 9l6 6 6-6" />
         </svg>
       </button>
-      <div
-        className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300 ${
-          isOpen ? 'block' : 'hidden'
-        }`}
-      >
-        <p className="text-gray-400">{answer}</p>
-      </div>
+
+      {isOpen && (
+        <div className="mt-3 text-gray-400 transition-all duration-300">
+          {answer}
+        </div>
+      )}
     </div>
   );
 };
 
 const FAQ: React.FC = () => {
+
+  // UPDATED: SupportTech X FAQs
   const faqs = [
     {
-      question: 'How does Successor SMMA help businesses grow on social media?',
+      question: "What services does SupportTech X provide?",
       answer:
-        'At Successor SMMA, we craft personalized strategies to boost your brand’s online presence. Our team uses data-driven insights, trend analysis, and creative content to connect you with your target audience. Whether it’s Instagram, LinkedIn, or Facebook, we create campaigns that engage and convert followers into loyal customers.',
+        "We offer domain & hosting setup, website development, server configuration, networking, CCTV setup, email integration, cloud backup, and on-site IT support anywhere in Hyderabad."
     },
     {
-      question: 'What types of businesses do you specialize in?',
+      question: "Do you offer on-site technical support?",
       answer:
-        'We work with a diverse range of industries, from startups to established enterprises. Our expertise spans tech companies, e-commerce brands, personal development coaches, real estate agencies, and more. No matter the industry, we tailor our approach to meet your unique business needs and goals.',
+        "Yes! Our technicians can visit your office or shop for device installation, troubleshooting, network setup, or repairs. On-site support is available across all major areas of Hyderabad."
     },
     {
-      question: 'How do you ensure the content aligns with my brand’s vision?',
+      question: "How long does it take to get my website live?",
       answer:
-        'We prioritize understanding your brand’s identity, mission, and values before launching any campaign. Our strategy begins with in-depth consultations, competitor analysis, and audience profiling, ensuring that every piece of content reflects your brand’s voice and resonates with your target market.',
+        "A basic business website can be completed within 3–5 days. More complex websites may take 1–3 weeks, depending on design, content, and functionality requirements."
     },
     {
-      question: 'Can I see results from your services quickly?',
+      question: "Can you help me purchase and set up a domain & hosting?",
       answer:
-        'While social media growth requires consistency and time, our strategies focus on delivering measurable results within the first few months. We provide regular performance reports, monitor engagement, and adjust campaigns as needed to maximize your ROI and accelerate growth.',
+        "Absolutely. We recommend the best domain name, purchase it for you, configure hosting, set up SSL, email accounts, and make your website fully ready to go live."
     },
     {
-      question: 'What services do you offer beyond social media management?',
+      question: "Do you offer maintenance or AMC (Annual Maintenance Contract)?",
       answer:
-        'In addition to managing your social media accounts, we offer comprehensive digital marketing solutions, including paid ad campaigns, influencer partnerships, content creation, video production, and website optimization. Our holistic approach ensures that every aspect of your digital presence is covered.',
+        "Yes, we provide monthly and annual maintenance plans which include updates, backups, security monitoring, and priority support—ideal for businesses needing ongoing IT care."
     },
     {
-      question: 'How transparent is your reporting process?',
+      question: "How does your pricing work?",
       answer:
-        'Transparency is key at Successor SMMA. We provide detailed reports that break down your social media performance, including engagement rates, follower growth, ad spend, and conversions. These reports allow you to track your progress and make informed decisions about your digital strategy.',
+        "We keep pricing transparent and affordable for local businesses. Services like domain/hosting have fixed costs, while website development and on-site support depend on the project scope. Contact us for a custom quote."
+    },
+    {
+      question: "What is your response time for support requests?",
+      answer:
+        "Most issues are addressed within 1–2 hours during working hours. For emergencies, we offer priority support depending on your plan."
     },
   ];
 
   return (
     <div className="bg-black text-white min-h-screen px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+
       {/* Title */}
       <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-        <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
-          Your Questions About Social Media Marketing, Answered
+        <h2 className="text-3xl font-bold md:text-4xl leading-tight">
+          Frequently Asked Questions
         </h2>
-        <p className="mt-1 text-gray-400">
-          Discover how Successor SMMA can help elevate your brand’s social media game.
+        <p className="mt-2 text-gray-400">
+          Everything you need to know about SupportTech X and our IT services.
         </p>
       </div>
+
       {/* FAQ Items */}
       <div className="max-w-2xl mx-auto">
-        <div className="hs-accordion-group">
-          {faqs.map((faq, index) => (
-            <FAQItem
-              key={index}
-              question={faq.question}
-              answer={faq.answer}
-            />
-          ))}
-        </div>
+        {faqs.map((faq, index) => (
+          <FAQItem key={index} question={faq.question} answer={faq.answer} />
+        ))}
       </div>
+
     </div>
   );
 };

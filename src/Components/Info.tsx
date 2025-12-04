@@ -1,3 +1,4 @@
+import logo from '../assets/logo.svg';
 const Info = () => {
   return (
     <div
@@ -67,35 +68,13 @@ const Info = () => {
           </div>
         </div>
 
-        {/* RIGHT IMAGE GRID */}
-        <div className="lg:col-span-6">
-          <div className="grid grid-cols-12 gap-4 sm:gap-6 items-center lg:translate-x-5">
-
-            <div className="col-span-4">
-              <img
-                className="rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
-                src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=900&q=80"
-                alt="IT Support"
-              />
-            </div>
-
-            <div className="col-span-3">
-              <img
-                className="rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
-                alt="Server & Hosting Setup"
-              />
-            </div>
-
-            <div className="col-span-5">
-              <img
-                className="rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
-                src="https://images.unsplash.com/photo-1551033406-c47e2a1d2dc1?auto=format&fit=crop&w=900&q=80"
-                alt="Website Development"
-              />
-            </div>
-
-          </div>
+        {/* RIGHT IMAGE */}
+        <div className="lg:col-span-6 mt-10 lg:mt-0 flex justify-center">
+          <img
+            className="w-full max-w-md rounded-xl shadow-lg transform hover:scale-105 transition duration-300"
+            src={logo}
+            alt="SupportTech X IT Services"
+          />
         </div>
 
       </div>
