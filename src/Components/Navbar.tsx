@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           <a href="/" aria-label="Logo" className="text-2xl font-bold hover:text-gray-200 transition-colors">
-            Successor
+            SupportTechX
           </a>
         </div>
 

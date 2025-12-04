@@ -5,84 +5,102 @@ const Steps = () => {
 
         <div className="max-w-5xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto">
 
+          {/* TITLE */}
           <div className="max-w-3xl mb-10 lg:mb-14 mt-5">
-            <h2 className="text-blue-600 font-semibold text-2xl md:text-4xl md:leading-tight">Our Approach</h2>
-            <p className="mt-1 text-gray-400">
-              This profound insight guides our comprehensive strategy — from meticulous research and strategic planning to the seamless execution of brand development and website or product deployment.
+            <h2 className="text-blue-500 font-semibold text-2xl md:text-4xl md:leading-tight">
+              How SupportTech X Works
+            </h2>
+            <p className="mt-2 text-gray-400">
+              From consultation to deployment — our structured, reliable, and transparent workflow
+              ensures smooth IT operations for your business in Hyderabad.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-center">
+
+            {/* IMAGE */}
             <div className="aspect-w-16 aspect-h-9 lg:aspect-none">
-              <img className="w-full object-cover rounded-xl shadow-lg" src="https://images.unsplash.com/photo-1587614203976-365c74645e83?q=80&w=480&h=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Features Image" />
+              <img
+                className="w-full object-cover rounded-xl shadow-lg"
+                src="https://images.unsplash.com/photo-1581091012184-7c2c8b43a3a0?auto=format&fit=crop&w=900&q=80"
+                alt="SupportTech X IT Services"
+              />
             </div>
 
+            {/* STEPS */}
             <div>
               <div className="mb-4">
-                <h3 className="text-blue-600 text-xs font-medium uppercase">Steps</h3>
+                <h3 className="text-blue-500 text-xs font-medium uppercase tracking-wide">
+                  PROCESS
+                </h3>
               </div>
 
               <div className="flex flex-col gap-y-8">
+
+                {/* STEP 1 */}
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-lg">
-                      1
-                    </span>
-                  </div>
-                  <div className="flex-grow">
-                    <p className="text-sm lg:text-base text-gray-400">
-                      <span className="text-white font-semibold">Market Research and Analysis:</span> Identify your target audience and understand their needs, preferences, and behaviors.
-                    </p>
-                  </div>
+                  <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-500 text-blue-500 font-semibold text-xs rounded-full bg-white shadow-lg">
+                    1
+                  </span>
+                  <p className="text-sm lg:text-base text-gray-400">
+                    <span className="text-white font-semibold">Requirement Analysis & Consultation:</span>{" "}
+                    We understand your business needs — domain, hosting, website, hardware, or 
+                    on-site IT support.
+                  </p>
                 </div>
 
+                {/* STEP 2 */}
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-lg">
-                      2
-                    </span>
-                  </div>
-                  <div className="flex-grow">
-                    <p className="text-sm lg:text-base text-gray-400">
-                      <span className="text-white font-semibold">Product Development and Testing:</span> Develop digital products or services that address the needs and preferences of your target audience.
-                    </p>
-                  </div>
+                  <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-500 text-blue-500 font-semibold text-xs rounded-full bg-white shadow-lg">
+                    2
+                  </span>
+                  <p className="text-sm lg:text-base text-gray-400">
+                    <span className="text-white font-semibold">Setup & Deployment:</span>{" "}
+                    We perform domain registration, hosting setup, website creation, device installation, 
+                    or server configuration based on your needs.
+                  </p>
                 </div>
 
+                {/* STEP 3 */}
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-lg">
-                      3
-                    </span>
-                  </div>
-                  <div className="flex-grow">
-                    <p className="text-sm lg:text-base text-gray-400">
-                      <span className="text-white font-semibold">Marketing and Promotion:</span> Develop a comprehensive marketing strategy to promote your digital products or services.
-                    </p>
-                  </div>
+                  <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-500 text-blue-500 font-semibold text-xs rounded-full bg-white shadow-lg">
+                    3
+                  </span>
+                  <p className="text-sm lg:text-base text-gray-400">
+                    <span className="text-white font-semibold">Testing & Optimization:</span>{" "}
+                    We ensure everything runs smoothly — website speed, device stability, network 
+                    performance, and security checks.
+                  </p>
                 </div>
 
+                {/* STEP 4 */}
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-600 text-blue-600 font-semibold text-xs uppercase rounded-full bg-white shadow-lg">
-                      4
-                    </span>
-                  </div>
-                  <div className="flex-grow">
-                    <p className="text-sm lg:text-base text-gray-400">
-                      <span className="text-white font-semibold">Launch and Optimization:</span> Launch your digital products or services to the market, closely monitoring their performance and user feedback.
-                    </p>
-                  </div>
+                  <span className="flex justify-center items-center w-8 h-8 border-2 border-blue-500 text-blue-500 font-semibold text-xs rounded-full bg-white shadow-lg">
+                    4
+                  </span>
+                  <p className="text-sm lg:text-base text-gray-400">
+                    <span className="text-white font-semibold">Ongoing Support & AMC:</span>{" "}
+                    Get on-call and on-site support anytime — including monthly maintenance and 
+                    dedicated SupportTech X care.
+                  </p>
                 </div>
 
-                <a className="group inline-flex items-center gap-x-2 py-2 px-4 bg-blue-600 font-medium text-sm text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none" href="https://calendly.com/successor562/30min">
-                  <svg className="shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    <path className="opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-hover:delay-100 transition" d="M14.05 2a9 9 0 0 1 8 7.94"></path>
-                    <path className="opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition" d="M14.05 6A5 5 0 0 1 18 10"></path>
+                {/* CTA */}
+                <a
+                  className="group inline-flex items-center gap-x-2 py-2 px-5 bg-blue-600 font-medium text-sm text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none transition"
+                  href="tel:+919876543210"
+                >
+                  <svg
+                    className="shrink-0 w-4 h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none" stroke="currentColor" strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3 4.11 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.72c.12.66.37 1.3.72 1.87l-1.35 1.35a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                   </svg>
-                  Schedule a Call
+                  Contact SupportTech X
                 </a>
+
               </div>
             </div>
 
@@ -91,7 +109,7 @@ const Steps = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Steps;

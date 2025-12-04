@@ -4,7 +4,6 @@ import { Element } from 'react-scroll';
 import Hero from './Components/Hero';
 import Features from './Components/Features';
 import Steps from './Pages/Steps';
-import Explore from './Pages/Explore';
 import TestimonialsWithStats from './Pages/Testimonials';
 import Newsletter from './Components/Newsletter';
 import Accordion from './Pages/FAQ';
@@ -35,10 +34,6 @@ const App: React.FC = () => {
 
         <Element name="info">
           <Info  />
-        </Element>
-
-        <Element name="explore">
-          <Explore />
         </Element>
 
         <Element name="testimonials">
