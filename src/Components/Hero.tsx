@@ -51,7 +51,7 @@ const Hero = () => {
         </div>
 
         {/* Subtitle */}
-        <div className="mt-5 max-w-3xl text-center mx-auto mt-5">
+        <div className="mt-5 max-w-3xl text-center mx-auto">
           <p className="text-lg text-gray-400">
             We provide local-first solutions for small businesses in Hyderabad — domain & hosting setup, website development, managed IT and on-site technical support. Fast, friendly, and priced for local businesses.
           </p>
